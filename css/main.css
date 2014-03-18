@@ -1,0 +1,65 @@
+body {
+	padding-top: 51px;
+}
+
+.container {
+	position: absolute;
+	border: 1px solid rgb(220,220,220);
+	background-color: rgb(250,250,250);
+	top: 50px;
+	bottom: 20px;
+}
+
+#content {
+	left: 250px;
+	right: 20px;
+}
+
+#sourceList {
+	left: 20px;
+	width: 220px;
+}
+
+#sourceList li {
+	cursor: default;
+	padding: 5px 10px;
+	border-bottom: 1px solid rgb(220,220,220);
+}
+
+#sourceList li.has-children:before{
+	font-size: 12px;
+	content: '▼ '
+}
+
+#sourceList li.has-children.collapsed:before{
+	content: '► '
+}
+
+#sourceList > li {
+	-webkit-padding-start: 5px;
+}
+#sourceList ul {
+	overflow: hidden;
+}
+
+#sourceList ul li {
+	-webkit-padding-start: 20px;
+}
+
+#sourceList > li.collapsed + ul {
+	height: 0;
+	transition: height 0.2s linear;
+}
+
+#graph {
+	position: absolute;
+	left: 0; right: 0;
+	top: 0; bottom: 0;
+}
+
+#graph > svg {
+	position: absolute;
+	left: 0; right: 0;
+	top: 0; bottom: 0;
+	background-color: rgb(250,250,250);
+}

@@ -1,0 +1,8 @@
+body, div, ul {
+	font-family: Helvetica;
+	margin: 0;
+	padding: 0;
+}
+ul, li {
+	display: block;
+}

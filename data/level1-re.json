@@ -1,0 +1,131 @@
+{
+    // class item {
+    //     key /item/%name%
+
+    //     constructor name tag
+    //     string tag   -islist 1
+    // }
+    "item" : {
+        "key": "/item/%name%",
+        "constructors": [
+            {
+
+            }
+        ],
+        "fields": {
+            "tag": {
+                "type": "string",
+                "isList": 1 // should this be a boolean?
+            }
+        }
+        // Alternate:
+        // "fields": [
+        //     {
+        //         "key": "tag",
+        //         "type": "string",
+        //         "isList": 1
+        //     }
+        // ]
+    },
+
+    // class person {
+    //     key /person/%name%
+
+    //     constructor name body?
+    //     string      name
+    //     symbolic    gender -oneof {male female unknown}
+    //     number      age
+    //     string      quote
+    //     body        item_purchased
+    // }
+    "person": {
+        "key": "/person/%name%",
+        "constructors": [
+            {
+
+            }
+        ],
+        "fields": {
+            "name": {
+                "type": "string",
+                "_class": "field",
+                "_path": "/classes/person/fields/0"
+            },
+            "gender": {
+                "type": "symbolic",
+                "oneOf": [
+                    "male",
+                    "female",
+                    "unknown"
+                ]
+            },
+            "age": {
+                "type": "number"
+            },
+            "quote": {
+                "type": "string"
+            },
+            "item_purchased": {
+                "type": "body" // what is a `body` type?
+            }
+        }
+    },
+
+    // class item_purchased {
+    //     key purchases/%auto%
+
+    //     constructor name
+    //     constructor name tag...
+    //     string name -refpath /item/%name%
+    // }
+    "item_purchased": {
+        "key": "purchases/%auto%",
+        "constructors": [
+            {
+
+            }
+        ],
+        "fields": {
+            "name": {
+                "type": "string",
+                "refPath": "/item/%name%"
+            }
+        }
+    },
+
+    // class man {
+    //     inherit person
+    //     symbolic gender = male
+    // }
+    "man": {
+        "key": "/person/%name%",
+        "inherit": "person",
+        "fields": {
+            "gender": {
+                "type": "symbolic",
+                "value": "male"
+            }
+        }
+    },
+
+    // class woman {
+    //     inherit person
+    //     symbolic gender = female
+    // }
+    "woman": {
+        "key": "/person/%name%",
+        "inherit": "person",
+        "fields": {
+            "gender": {
+                "type": "symbolic",
+                "value": "female"
+            }
+        }
+    }
+}
+
+
+
+
+
+

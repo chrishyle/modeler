@@ -1,0 +1,121 @@
+{ 
+  "model" : {
+    "classes" : [
+      {
+        "_type" : "class", 
+        "_key"  : "item",
+        "_path" : "/classes/item",
+        "constructor" : {
+            "_key" : 0,
+            "_path": "/classes/item/constructors/0",
+            "cons" : [
+              "name",
+              "tag" 
+            ]
+        },
+        "fields": [
+          {
+            "_type" : "string",
+            "_key"  : 0,
+            "_path" : "/classes/item/fields/0"
+          }
+        ]
+      },
+      {
+        "_type" : "class", 
+        "_key"  : "item_purchased",
+        "_path" : "/classes/item_purchased",
+
+        // How are these used?
+        "constructors" : [
+          {
+             "_type" : "constructor",
+             "_key"  : 0,
+             "_path" : "/classes/item_purchased/constructors/0",
+             "cons"  : [
+               "name" 
+             ]
+          },
+          {
+             "_type" : "constructor",
+             "_key"  : 1,
+             "_path" : "/classes/item_purchased/constructors/1",
+             "cons"  : [
+               "name" ,
+               "tag..." 
+             ]
+          }
+        ],
+        "fields" : [
+          {
+            "_type" : "string", 
+            "_key"  : 0,
+            "_path" : "/classes/item_purchased/fields/0"
+          }
+        ]
+      },
+      {
+         "_type"   : "class",
+         "_key"    : "man",
+         "_path"   : "/classes/man",
+         "inherit" : [
+           "person" 
+         ],
+         "symbolic" : {
+            "_key"       : 0,
+            "_path"      : "/classes/man/fields/0"
+         },
+      },
+      {
+         "_type"      : "class",
+         "_key"       : "person",
+         "_path"      : "/classes/person",
+         "body"        : [
+           "item_purchased" 
+         ],
+         "constructor" : {
+            "_key"       : 0,
+            "_path"      : "/classes/person/constructors/0",
+            "cons"        : [
+              "name" ,
+              "body?" 
+            ]
+         },
+         "fields" : [
+           "string" : {
+              "_key"       : 0,
+              "_path"      : "/classes/person/fields/0"
+           },
+           "symbolic" : {
+              "_key"       : 1,
+              "_path"      : "/classes/person/fields/1",
+              "oneof"       : [
+                "male" ,
+                "female" ,
+                "unknown" 
+              ]
+           },
+           "number" : {
+              "_key"       : 2,
+              "_path"      : "/classes/person/fields/2"
+           },
+           "string" : {
+              "_key"       : 3,
+              "_path"      : "/classes/person/fields/3"
+           }
+         ]
+      },
+      "class" : {
+         "_key"       : "woman",
+         "_path"      : "/classes/woman",
+         "inherit"     : [
+           "person" 
+         ],
+         "symbolic" : {
+            "_key"       : 0,
+            "_path"      : "/classes/woman/fields/0"
+         },
+      }
+    ]
+  }
+}

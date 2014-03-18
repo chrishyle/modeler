@@ -1,0 +1,265 @@
+{ 
+  "model" : {
+    "classes" : [
+      "class" : {
+         "_key"       : "item",
+         "_path"      : "/classes/item",
+         "constructor" : {
+            "_key"       : 0,
+            "_path"      : "/classes/item/constructors/0",
+            "cons"        : [
+              "name" ,
+              "tag" 
+            ]
+         },,
+         "string" : {
+            "_key"       : 0,
+            "_path"      : "/classes/item/fields/0"
+         },
+      },
+      "class" : {
+         "_key"       : "item_purchased",
+         "_path"      : "/classes/item_purchased",
+         "constructors" : [
+           "constructor" : {
+              "_key"       : 0,
+              "_path"      : "/classes/item_purchased/constructors/0",
+              "cons"        : [
+                "name" 
+              ]
+           },
+           "constructor" : {
+              "_key"       : 1,
+              "_path"      : "/classes/item_purchased/constructors/1",
+              "cons"        : [
+                "name" ,
+                "tag..." 
+              ]
+           }
+         ],
+         "string" : {
+            "_key"       : 0,
+            "_path"      : "/classes/item_purchased/fields/0"
+         },
+      },
+      "class" : {
+         "_key"       : "man",
+         "_path"      : "/classes/man",
+         "inherit"     : [
+           "person" 
+         ],
+         "symbolic" : {
+            "_key"       : 0,
+            "_path"      : "/classes/man/fields/0"
+         },
+      },
+      "class" : {
+         "_key"       : "person",
+         "_path"      : "/classes/person",
+         "body"        : [
+           "item_purchased" 
+         ],
+         "constructor" : {
+            "_key"       : 0,
+            "_path"      : "/classes/person/constructors/0",
+            "cons"        : [
+              "name" ,
+              "body?" 
+            ]
+         },,
+         "fields" : [
+           "string" : {
+              "_key"       : 0,
+              "_path"      : "/classes/person/fields/0"
+           },
+           "symbolic" : {
+              "_key"       : 1,
+              "_path"      : "/classes/person/fields/1",
+              "oneof"       : [
+                "male" ,
+                "female" ,
+                "unknown" 
+              ]
+           },
+           "number" : {
+              "_key"       : 2,
+              "_path"      : "/classes/person/fields/2"
+           },
+           "string" : {
+              "_key"       : 3,
+              "_path"      : "/classes/person/fields/3"
+           }
+         ]
+      },
+      "class" : {
+         "_key"       : "woman",
+         "_path"      : "/classes/woman",
+         "inherit"     : [
+           "person" 
+         ],
+         "symbolic" : {
+            "_key"       : 0,
+            "_path"      : "/classes/woman/fields/0"
+         },
+      }
+    ],
+    "item" : [
+      "item" : {
+         "_key"       : "beer_bottle",
+         "_path"      : "/item/beer_bottle",
+         "tag"         : [
+           "M" 
+         ]
+      },
+      "item" : {
+         "_key"       : "board_game",
+         "_path"      : "/item/board_game",
+         "tag"         : [
+           "M" ,
+           "W" 
+         ]
+      },
+      "item" : {
+         "_key"       : "bond_movie",
+         "_path"      : "/item/bond_movie",
+         "tag"         : [
+           "M" 
+         ]
+      },
+      "item" : {
+         "_key"       : "broom",
+         "_path"      : "/item/broom",
+         "tag"         : [
+           "W" 
+         ]
+      },
+      "item" : {
+         "_key"       : "car",
+         "_path"      : "/item/car",
+         "tag"         : [
+           "M" ,
+           "W" 
+         ]
+      },
+      "item" : {
+         "_key"       : "high_heels",
+         "_path"      : "/item/high_heels",
+         "tag"         : [
+           "W" 
+         ]
+      },
+      "item" : {
+         "_key"       : "lipstick",
+         "_path"      : "/item/lipstick",
+         "tag"         : [
+           "W" 
+         ]
+      },
+      "item" : {
+         "_key"       : "machinegun",
+         "_path"      : "/item/machinegun"
+      },
+      "item" : {
+         "_key"       : "moose_head",
+         "_path"      : "/item/moose_head",
+         "tag"         : [
+           "M" 
+         ]
+      },
+      "item" : {
+         "_key"       : "motorcycle",
+         "_path"      : "/item/motorcycle",
+         "tag"         : [
+           "M" 
+         ]
+      },
+      "item" : {
+         "_key"       : "nylons",
+         "_path"      : "/item/nylons",
+         "tag"         : [
+           "W" 
+         ]
+      },
+      "item" : {
+         "_key"       : "performance_skii",
+         "_path"      : "/item/performance_skii",
+         "tag"         : [
+           "M" 
+         ]
+      },
+      "item" : {
+         "_key"       : "trash_can",
+         "_path"      : "/item/trash_can",
+         "tag"         : [
+           "W" 
+         ]
+      },
+      "item" : {
+         "_key"       : "wine",
+         "_path"      : "/item/wine",
+         "tag"         : [
+           "M" ,
+           "W" 
+         ]
+      }
+    ],
+    "person" : [
+      "man" : {
+         "_key"       : "Bob",
+         "_path"      : "/person/Bob",
+         "purchases" : [
+           "item_purchased" : {
+              "_key"       : 0,
+              "_path"      : "/person/Bob/purchases/0"
+           },
+           "item_purchased" : {
+              "_key"       : 1,
+              "_path"      : "/person/Bob/purchases/1"
+           }
+         ]
+      },
+      "woman" : {
+         "_key"       : "Jane",
+         "_path"      : "/person/Jane",
+         "item_purchased" : {
+            "_key"       : 0,
+            "_path"      : "/person/Jane/purchases/0"
+         },
+      },
+      "man" : {
+         "_key"       : "Joe",
+         "_path"      : "/person/Joe",
+         "purchases" : [
+           "item_purchased" : {
+              "_key"       : 0,
+              "_path"      : "/person/Joe/purchases/0"
+           },
+           "item_purchased" : {
+              "_key"       : 1,
+              "_path"      : "/person/Joe/purchases/1"
+           },
+           "item_purchased" : {
+              "_key"       : 2,
+              "_path"      : "/person/Joe/purchases/2"
+           }
+         ]
+      },
+      "man" : {
+         "_key"       : "Ramesh",
+         "_path"      : "/person/Ramesh",
+         "item_purchased" : {
+            "_key"       : 0,
+            "_path"      : "/person/Ramesh/purchases/0"
+         },
+      },
+      "woman" : {
+         "_key"       : "Ying",
+         "_path"      : "/person/Ying",
+         "item_purchased" : {
+            "_key"       : 0,
+            "_path"      : "/person/Ying/purchases/0"
+         },
+      }
+    ]
+  }
+}
