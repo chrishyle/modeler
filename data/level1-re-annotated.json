@@ -1,4 +1,10 @@
 {
+    // class item {
+    //     key /item/%name%
+
+    //     constructor name tag
+    //     string tag   -islist 1
+    // }
     "item" : {
         "key": "/item/%name%",
         "constructors": [
@@ -8,10 +14,30 @@
         ],
         "fields": {
             "tag": {
-                "type": "string"
+                "type": "string",
+                "isList": 1 // should this be a boolean?
             }
         }
+        // Alternate:
+        // "fields": [
+        //     {
+        //         "key": "tag",
+        //         "type": "string",
+        //         "isList": 1
+        //     }
+        // ]
     },
+
+    // class person {
+    //     key /person/%name%
+
+    //     constructor name body?
+    //     string      name
+    //     symbolic    gender -oneof {male female unknown}
+    //     number      age
+    //     string      quote
+    //     body        item_purchased
+    // }
     "person": {
         "key": "/person/%name%",
         "constructors": [
@@ -40,9 +66,18 @@
                 "type": "string"
             },
             "item_purchased": {
+                "type": "body" // what is a `body` type?
             }
         }
     },
+
+    // class item_purchased {
+    //     key purchases/%auto%
+
+    //     constructor name
+    //     constructor name tag...
+    //     string name -refpath /item/%name%
+    // }
     "item_purchased": {
         "key": "purchases/%auto%",
         "constructors": [
@@ -57,6 +92,11 @@
             }
         }
     },
+
+    // class man {
+    //     inherit person
+    //     symbolic gender = male
+    // }
     "man": {
         "key": "/person/%name%",
         "inherit": "person",
@@ -67,6 +107,11 @@
             }
         }
     },
+
+    // class woman {
+    //     inherit person
+    //     symbolic gender = female
+    // }
     "woman": {
         "key": "/person/%name%",
         "inherit": "person",
@@ -78,3 +123,9 @@
         }
     }
 }
+
+
+
+
+
+
