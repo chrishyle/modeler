@@ -1,5 +1,4 @@
 body {
-	padding-top: 51px;
 }
 
 .container {
@@ -10,7 +9,21 @@ body {
 	bottom: 20px;
 }
 
+#header {
+	position: absolute;
+	top: 10px;
+	left: 20px;
+	right: 20px;
+}
+#title {
+	font-size: 30px;
+	font-style: italic;
+	color: rgb(185,185,185);
+	text-align: right;
+}
+
 #content {
+	top: 51px;
 	left: 250px;
 	right: 20px;
 }
@@ -62,4 +75,44 @@ body {
 	left: 0; right: 0;
 	top: 0; bottom: 0;
 	background-color: rgb(250,250,250);
+}
+
+.editing-box {
+	position: absolute;
+	z-index: 2;
+	font-weight: bold;
+	font-size: 12px;
+	-webkit-box-sizing: border-box;
+	width: 100%;
+	border: none;
+	background-color: rgba(255,255,255,0.5);
+	text-align: center;
+}
+.editing-box:focus {
+	outline: none;
+}
+
+.modal {
+	position: fixed;
+	top: 0; left: 0; bottom: 0; right: 0;
+	background-color: rgba(0,0,0,0.25)
+}
+
+#newModel {
+	position: absolute;
+	bottom: 0; right: 0; left: 0;
+	border: 1px solid rgb(220,220,220);
+	background-color: rgb(250,250,250);
+}
+
+#dataSelector {
+	position: absolute;
+	top: 5px;
+}
+
+.marker-vertices,
+.marker-arrowheads,
+.link-tools {
+	display: none !important;
+   opacity: 0 !important;
 }

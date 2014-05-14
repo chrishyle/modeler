@@ -8,7 +8,7 @@
     <title>Modeler</title>
 
     <link href="css/reset.css" rel="stylesheet">
-    <link href="bower/joint/dist/joint.min.css" rel="stylesheet">
+    <link href="js/bower/joint/dist/joint.all.min.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -19,12 +19,21 @@
   </head>
 
   <body>
+    <div id="header">
+      <select id="dataSelector">
+        <option value='person.json'>Person Models</option>
+        <option value='library.json'>Library Models</option>
+      </select>
+      <div id='title'>Modeler.io</div>
+    </div>
     <ul id="sourceList" class="container">
+          <button id="newModel">+ New Model</button>
     </ul>
 
     <div id="content" class="container">
     	<div id="graph"></div>
     </div>
+
 
     <script src="js/bower/superagent/superagent.js"></script>
     <script src="js/bower/joint/dist/joint.min.js"></script>

@@ -1,0 +1,99 @@
+{
+    "branch": {
+        "key": "/person/%name%",
+        "constructors": [
+            {
+
+            }
+        ],
+        "fields": {
+            "id": {
+                "type": "number"
+            },
+            "name": {
+                "type": "string",
+                "_class": "field",
+                "_path": "/classes/person/fields/0"
+            },
+            "bookshelves": {
+                "type": "relation"
+            },
+            "customers": {
+                "type": "relation"
+            },
+            "librarians": {
+                "type": "relation"
+            }
+        }
+    },
+    "librarian": {
+        "key": "purchases/%auto%",
+        "constructors": [
+            {
+
+            }
+        ],
+        "fields": {
+            "id": {
+                "type": "string",
+                "refPath": "/item/%name%"
+            },
+            "name": {
+                "type": "string",
+                "refPath": "/item/%name%"
+            }
+        }
+    },
+    "customer": {
+        "key": "/person/%name%",
+        "inherit": "person",
+        "fields": {
+            "id": {
+                "type": "string",
+                "refPath": "/item/%name%"
+            },
+            "name": {
+                "type": "string",
+                "refPath": "/item/%name%"
+            },
+            "books": {
+                "type": "relation"
+            }
+        }
+    },
+    "bookshelf": {
+        "key": "/person/%name%",
+        "inherit": "person",
+        "fields": {
+            "id": {
+                "type": "number"
+            },
+            "location": {
+                "type": "string"
+            },
+            "catalog_numbers": {
+                "type": "string"
+            },
+            "books": {
+                "type": "relation"
+            }
+        }
+    },
+    "book": {
+        "key": "/person/%name%",
+        "fields": {
+            "catalog_id": {
+                "type": "string"
+            },
+            "author": {
+                "type": "string"
+            },
+            "title": {
+                "type": "string"
+            },
+            "isbn": {
+                "type": "string"
+            }
+        }
+    }
+}
