@@ -5,7 +5,7 @@ Modeler.io
 
 A Web based visualization for models.
 
-![Demo](chrishyle.github.com/modeler/img/screenshot.png)
+![](http://chrishyle.github.com/modeler/img/screenshot.png)
 
 This web app is designed to display model data served as JSON from a server.
 The JSON format describes the model and its attributes, along with attribute
@@ -23,6 +23,12 @@ Double clicking on a model name allows the user to rename the model. Double
 clicking on an attribute allows the user to change the name or type of the
 attribute.
 
+### A note about server interaction
+
+We were unable to open source the server code that generates and saves JSON for
+this project. As a result, we have built two examples and serve them as static
+JSON. This also prevents us from being able to save changes to the models back
+to the server for now.
 
 ### Roadmap
 
