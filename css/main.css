@@ -56,7 +56,7 @@ body {
 }
 
 #sourceList ul li {
-	-webkit-padding-start: 20px;
+	-webkit-padding-start: 30px;
 }
 
 #sourceList > li.collapsed + ul {
