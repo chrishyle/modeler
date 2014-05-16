@@ -52,12 +52,13 @@
                     };
                     break;
                 case 'library.json':
+
                     positionMap = {
-                        person: { x: 250, y: 20 },
-                        man: { x: 100, y: 280 },
-                        woman: { x: 400, y: 280 },
-                        item_purchased: { x: 600, y: 20 },
-                        item: { x: 750, y: 280 }
+                        book: { x: 750, y: 350 },
+                        bookshelf: { x: 680, y: 40 },
+                        customer: { x: 390, y: 350 },
+                        librarian: { x: 90, y: 350 },
+                        branch: { x: 210, y: 40 }
                     };
                     break;
             }
